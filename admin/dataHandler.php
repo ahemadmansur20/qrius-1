@@ -61,8 +61,6 @@
         }
 
         elseif(strcmp($intent, 'newPublication')==0){
-            var_dump($_POST);
-            var_dump($_FILES);
 
             $bookid = md5(date('dmYHisu'));
 
