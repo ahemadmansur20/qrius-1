@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^admin/readBook/([0-9a-zA-Z-]+)*$ ./admin/readBook.php?link=$1
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
