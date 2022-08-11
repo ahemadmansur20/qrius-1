@@ -15,20 +15,37 @@
                 <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
                 <li class="nav-header">Library</li>
-                <li class="nav-item">
-                    <a href="browse" class="nav-link" id="sideBrowse">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p>
-                            Browse
-                        </p>
-                    </a>
-                </li>
+                <?php
+                    if($profile['type']==1){
+                        ?>
+                        <li class="nav-item">
+                            <a href="browse" class="nav-link" id="sideBrowse">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Browse
+                                </p>
+                            </a>
+                        </li>
+                        <?php
+                    }
+                ?>
                 <li class="nav-item">
                     <a href="dashboard" class="nav-link" id="sideDashboard">
                         <i class="nav-icon fas fa-columns"></i>
                         <p>
-                            My Purchases
-                            <span class="badge badge-info right"><?php echo getActivePurchaseCount($profile['userid']); ?></span>
+                            <?php
+                                if($profile['type']==1){
+                                    ?>
+                                    My Purchases
+                                    <span class="badge badge-info right"><?php echo getActivePurchaseCount($profile['userid']); ?></span>
+                                    <?php
+                                }else{
+                                    ?>
+                                    My Content
+                                    <span class="badge badge-info right"><?php echo getActivePublishedCount($profile['userid']); ?></span>
+                                    <?php
+                                }
+                            ?>
                         </p>
                     </a>
                 </li>

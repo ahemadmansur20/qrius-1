@@ -107,7 +107,7 @@
                                                 <a href="javascript:showDetails('<?php echo $row['bookid']; ?>')" class="btn btn-sm bg-teal">
                                                     <i class="fas fa-info"></i>&nbsp;&nbsp;Read More
                                                 </a>
-                                                <a href="javascript:rent(<?php echo $row['bookid']; ?>)" class="btn btn-sm btn-primary" onclick>
+                                                <a href="javascript:rent('<?php echo $row['bookid']; ?>')" class="btn btn-sm btn-primary" onclick>
                                                     <i class="fas fa-dollar-sign"></i>&nbsp;&nbsp;Rent for 
                                                     <?php
                                                         if($rentAmount==0){

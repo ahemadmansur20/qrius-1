@@ -28,6 +28,7 @@
             $purchaseid = md5(date('dmYHisu'));
             $userid = $profile['userid'];
             $bookid = $bookid;
+            $authorid = $book['bookAuthor'];
             $fromDate = date('Y-m-d');
             $toDate = date('Y-m-d', strtotime($fromDate. ' + 30 days'));
             $amount = $rentAmount;
@@ -35,7 +36,7 @@
             $str = "123456789ABCDEFGHIJKLMNPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz";
             $link = substr(str_shuffle($str), 0, 8);
 
-            $query = "INSERT INTO purchaseHistory (purchaseid, userid, bookid, fromDate, toDate, amount, link) VALUES ('$purchaseid', '$userid', '$bookid', '$fromDate', '$toDate', '$amount', '$link')";
+            $query = "INSERT INTO purchaseHistory (purchaseid, userid, bookid, fromDate, toDate, amount, link, author) VALUES ('$purchaseid', '$userid', '$bookid', '$fromDate', '$toDate', '$amount', '$link', '$authorid')";
             $result = $conn->query($query);
 
             if($rentAmount == 0){  
