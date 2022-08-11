@@ -21,6 +21,8 @@
                 $_SESSION['id'] = $row['id'];
                 if($type==1){
                     header('Location: dashboard');
+                }else{
+                    header('Location: authorDashboard');
                 }
             }else{
                 echo "<script>window.location.href='login?error=incorrectCredentials'</script>";
@@ -55,6 +57,42 @@
                 echo "<script>window.location.href='login'</script>";
             }else{
                 echo "<script>window.location.href='register?error=registerFailed'</script>";
+            }
+        }
+
+        elseif(strcmp($intent, 'newPublication')==0){
+            var_dump($_POST);
+            var_dump($_FILES);
+
+            $bookid = md5(date('dmYHisu'));
+
+            $author = $_POST['author'];
+            $name = $_POST['name'];
+            $about = $_POST['about'];
+            $genre = $_POST['genre'];
+            $price = $_POST['price'];
+            $rating = $_POST['rating'];
+
+            $target_dir1 = "bookImages/";
+            $target_file1 = $target_dir1.basename($_FILES["image"]["name"]);
+            $fileType1 = strtolower(pathinfo($target_file1,PATHINFO_EXTENSION));
+            $newfilename1 = md5(date('dmYHisu'));
+            $target_file1 = $target_dir1.$newfilename1.".".$fileType1;
+            move_uploaded_file($_FILES["image"]["tmp_name"], $target_file1);
+
+            $target_dir2 = "bookPDF/";
+            $target_file2 = $target_dir2.basename($_FILES["bookPDF"]["name"]);
+            $fileType2 = strtolower(pathinfo($target_file2,PATHINFO_EXTENSION));
+            $newfilename2 = md5(date('dmYHisu'));
+            $target_file2 = $target_dir2.$newfilename2.".".$fileType2;
+            move_uploaded_file($_FILES["bookPDF"]["tmp_name"], $target_file2);
+
+            $query = "INSERT INTO books (bookid, bookAuthor, bookName, bookAbout, bookGenre, bookPrice, bookRating, bookImage, bookLocation) VALUES ('$bookid', '$author', '$name', '$about', '$genre', '$price', '$rating', '$target_file1', '$target_file2')";
+            $result = $conn->query($query);
+            if($result===TRUE){
+                echo "<script>window.location.href='authorDashboard'</script>";
+            }else{
+                echo "<script>window.location.href='authorDashboard?error=newPublicationFailed'</script>";
             }
         }
     }

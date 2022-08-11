@@ -6,4 +6,11 @@
         $result = $conn->query($query);
         return $result->num_rows;
     }
+
+    function getActivePublishedCount($userid){
+        include('config.php');
+        $query = "SELECT * FROM books WHERE bookAuthor='$userid'";
+        $result = $conn->query($query);
+        return $result->num_rows;
+    }
 ?>
