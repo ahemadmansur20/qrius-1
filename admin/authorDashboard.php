@@ -70,7 +70,7 @@
                                 <div class="icon">
                                     <i class="ion ion-card"></i>
                                 </div>
-                                <a href="switchPlan" class="small-box-footer">
+                                <a href="#" class="small-box-footer" data-toggle="modal" data-target="#modalNewPublication">
                                     Publish More Books <i class="fas fa-arrow-circle-right"></i>
                                 </a>
                             </div>
