@@ -101,7 +101,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `userid`, `type`, `firstName`, `lastName`, `username`, `password`, `plan`, `planStart`, `planEnd`, `used`, `limit`) VALUES
-(1, 'admin', 1, 'Soumit', 'Das', 'reader', '1de9b0a30075ae8c303eb420c103c320', 1, '2022-08-10', '2022-09-09', 5, 2),
+(1, 'admin', 1, 'Soumit', 'Das', 'reader', '1de9b0a30075ae8c303eb420c103c320', 1, '2022-08-10', '2022-09-09', 0, 2),
 (2, 'admin2', 2, 'Soumit', 'Das', 'author', '02bd92faa38aaa6cc0ea75e59937a1ef', 1, '2022-08-11', '2022-09-10', 0, 2);
 
 --
