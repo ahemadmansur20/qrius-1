@@ -1,0 +1,143 @@
+#title{
+    margin: 0;
+    background-image: url(images/Background-img.png);
+    background-size: cover;
+    height: 40rem;
+}
+
+.copyright{
+    color: #fff;
+    font-size: 1rem;
+    height: fit-content;
+}
+
+
+.big-heading{
+    font-family: 'Cookie', cursive;
+    font-size: 7rem;
+    color: #fff;
+    text-align: center;
+}
+
+#features{
+    background-image: linear-gradient(to right, #B2C8DF, #FFFFDE);
+}
+
+#footer{
+    text-align: center;
+    padding-top: 15rem;
+    background-color: #06283D;
+}
+
+.title-txt{
+    text-align: center;
+}
+
+.title-img{
+    width: 60%;
+    margin-left: 100px;;
+}
+
+.navbar{
+    padding: 15px,0;
+}
+
+.navbar-brand{
+    font-family: "Verdana";
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.title-p{
+    color: white;
+    font-size: large;
+    width: 53vw !important;
+
+}
+
+.title-txt{
+    width: 53vw !important;
+}
+
+
+.title-heading{
+    font-family: "Montserrat";
+    font-size: 5rem;
+}
+
+
+.searchbar{
+    width: 600px;
+}
+
+
+.qrius-navbar{
+    width: 100%;
+    padding: 20px,0px;
+}
+
+.signup-btn{
+    padding: 8px;
+    width: 86px;
+    margin-left: 5px;
+}
+
+.card{
+    text-align: center;
+    height: 100%;
+}
+
+.cd-bd{
+    background-color: #CDF0EA;
+}
+
+.feature-box {
+    padding: 5%;
+    text-align: center;
+}
+
+.card-header{
+    background-color: #CDF0EA;
+}
+
+#book-carousel{
+    background-image: linear-gradient(to right, #ff6e7f, #bfe9ff);
+    padding: 4rem;
+}
+
+.carousel-heading{
+    font-family: 'Cookie', cursive;
+    font-size: 5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.row{
+    justify-content: center;
+}
+
+#membership{
+    background-color: #231955;
+}
+
+.memb-title{
+    text-align: center;
+    font-family: 'Cookie' , cursive;
+    font-size: 5rem;
+    color: #fff;
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Playball' , cursive;
+    color: #fff;
+}
+
+#membership{
+    padding: 2rem 0;
+}
+
+.dropdown{
+    float: left;
+}
